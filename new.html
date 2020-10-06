@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html"; charset=utf-8" />
+	<title>Калькулятор</title>
+	<script language="javascript">
+	function plus(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=peremennaja1+peremennaja2;
+		document.anketa.otvet.value=rezultat;
+		//alert(peremennaja1);	
+	}
+	function minus(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=peremennaja1-peremennaja2;
+		document.anketa.otvet.value=rezultat;
+		//alert(peremennaja1);	
+	}
+	function multiply(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=peremennaja1*peremennaja2;
+		document.anketa.otvet.value=rezultat;
+		//alert(peremennaja1);	
+	}
+	function divide(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=peremennaja1/peremennaja2;
+		document.anketa.otvet.value=rezultat;
+		//alert(peremennaja1);	
+	}
+	function power(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=Math.pow(peremennaja1, peremennaja2);
+		document.anketa.otvet.value=rezultat;
+		//alert(peremennaja1);	
+	}
+	function squareroot(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=Math.sqrt(peremennaja1);
+		document.anketa.otvet.value=rezultat;
+		//alert(peremennaja1);	
+	}
+	function cuberoot(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat1=Math.cbrt(peremennaja1);
+		rezultat2=Math.cbrt(peremennaja2);
+		document.anketa.otvet.value=rezultat1, rezultat2;
+		//alert(peremennaja1);	
+	}
+	function sinus(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezult1 = Math.sin(peremennaja1  * (Math.PI / 180)).toFixed(4);
+		rezult2 = Math.sin(peremennaja2  * (Math.PI / 180)).toFixed(4);
+		document.anketa.otvet.value="A = "+rezult1+"; B = "+rezult2;	
+	}
+	function cosinus(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezult1 = Math.cos(peremennaja1  * (Math.PI / 180)).toFixed(4);
+		rezult2 = Math.cos(peremennaja2  * (Math.PI / 180)).toFixed(4);
+		document.anketa.otvet.value="A = "+rezult1+"; B = "+rezult2;	
+	}
+	function tangens(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezult1 = Math.tan(peremennaja1  * (Math.PI / 180)).toFixed(4);
+		rezult2 = Math.tan(peremennaja2  * (Math.PI / 180)).toFixed(4);
+		document.anketa.otvet.value="A = "+rezult1+"; B = "+rezult2;	
+	}
+	function cotangens(){
+		peremennaja1=parseFloat(document.anketa.odin.value) * (Math.PI / 180);
+		peremennaja2=parseFloat(document.anketa.dva.value) * (Math.PI / 180);
+		rezult1 = Math.cos(peremennaja1) / Math.sin(peremennaja1);
+		rezult2 = Math.cos(peremennaja2) / Math.sin(peremennaja2);
+		rez1 = rezult1.toFixed(4);
+		rez2 = rezult2.toFixed(4)
+		document.anketa.otvet.value="A = "+rez1+"; B = "+rez2;	
+	}
+	</script>
+</head>
+	<body>
+	<form name="anketa" method="get" action="">
+	A=<input type="text" name="odin" /><br/>
+	B=<input type="text" name="dva" /><br/>
+	C=<input type="text" name="otvet" /><br/>
+	<input type="button" value="+" onclick="plus()" />
+	<input type="button" value="-" onclick="minus()" />
+	<input type="button" value="*" onclick="multiply()" />
+	<input type="button" value="/" onclick="divide()" />
+	<input type="button" value="^" onclick="power()" />
+	<input type="button" value="sqrt" onclick="squareroot()" />
+	<input type="button" value="cbrt" onclick="cuberoot()" /></br>
+	<input type="button" value="sin" onclick="sinus()" />
+	<input type="button" value="cos" onclick="cosinus()" />
+	<input type="button" value="tan" onclick="tangens()" />
+	<input type="button" value="cot" onclick="cotangens()" />
+	</form>
+	</body>
+</html>
